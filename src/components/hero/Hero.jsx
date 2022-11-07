@@ -1,8 +1,8 @@
 import "./hero.scss";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./use-follow-pointer";
-import { WiWindy } from "react-icons/wi";
+import { Clouds } from "../clouds/Clouds";
 const Start = () => {
     let w = window.innerWidth;
     let h = window.innerHeight;
@@ -22,32 +22,86 @@ const Start = () => {
 const Moon = () => {
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
+    const cloudsArray = [1, 2, 3, 4];
     return (
-        <motion.div
-            ref={ref}
-            className="box"
-            animate={{
-                x: -x / 15 + 80,
-                y: (-y / 15) - 55,
-            }}
-            transition={{
-                type: "spring",
-                damping: 10,
-                stiffness: 100,
-                restDelta: 0.001
-            }}
-        >
-            <motion.div className="crater crater1" />
-            <motion.div className="crater crater2" />
-            <motion.div className="crater crater3" />
-        </motion.div>
+        <React.Fragment>
+            <div className="container-moon">
+                <motion.div
+                    ref={ref}
+                    className="container-moon__moon"
+                    animate={{
+                        x: -x / 25 + 80,
+                        y: (-y / 25) - 55,
+                    }}
+                    transition={{
+                        type: "spring",
+                        damping: 10,
+                        stiffness: 100,
+                        restDelta: 0.001
+                    }}
+                >
+                    <motion.div className="container-moon__moon__crater container-moon__moon__crater1" />
+                    <motion.div className="container-moon__moon__crater container-moon__moon__crater2" />
+                    <motion.div className="container-moon__moon__crater container-moon__moon__crater3" />
+                </motion.div>
+                {cloudsArray.map((number, index) => (
+                    <motion.div
+                        key={index}
+                        ref={ref}
+                        className={`container-moon__cloud-${number}`}
+                        animate={{
+                            x: -x / 50 + 80,
+                            y: (-y / 50) - 55,
+                        }}
+                        transition={{
+                            type: "spring",
+                            damping: 10,
+                            stiffness: 100,
+                            restDelta: 0.001
+                        }}
+                    >
+                        <Clouds />
+                    </motion.div>
+                ))}
+            </div>
+        </React.Fragment>
     )
 };
-export default function Hero() {
+const NavList = () => {
     return (
-        <div className="container-hero">
-            <Start />
-            <Moon />
+        <div className="fp-nav">
+            <ul className="fp-nav__ul">
+                <li className="fp-nav__ul__li">
+                    <div className="indi active" />
+                </li>
+                <li className="fp-nav__ul__li">
+                    <div className="indi" />
+                </li>
+                <li className="fp-nav__ul__li">
+                    <div className="indi" />
+                </li>
+                <li className="fp-nav__ul__li">
+                    <div className="indi" />
+                </li>
+            </ul>
         </div>
+    )
+}
+export const Hero = () => {
+    return (
+        <section>
+            <div className="container-hero">
+                <Start />
+                <div className="container-hero__title">
+                    <h1 className="container-hero__title__text">SERGIO<br />CANO</h1>
+                    <div className="container-hero__title__span" />
+                    <div className="container-hero__title__span2" />
+                    <p className="container-hero__title__lead">Programador de software</p>
+                </div>
+                <Moon />
+                <p className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
+                <NavList />
+            </div>
+        </section>
     );
 }

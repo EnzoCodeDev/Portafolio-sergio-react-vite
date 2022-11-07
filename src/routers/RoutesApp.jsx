@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Hero from '../components/hero/Hero';
+import { Clouds } from '../components/clouds/Clouds';
+import { Hero } from '../components/hero/Hero';
 import Home from '../components/home/Home';
 export const RoutesApp = () => {
     return (
@@ -22,7 +23,7 @@ export const RoutesApp = () => {
                 exact
                 element={<h1>Hola mundo</h1>}
             /> */}
-            **<Route path="*" element={<Hero/>}></Route>**
+            **<Route path="*" element={<Home />}></Route>**
         </Routes>
     );
 }

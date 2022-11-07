@@ -50,7 +50,7 @@ let listItems = [
 export const MenuItem = () => {
     const style = { border: `2px solid ${colors[0]}` };
     return (
-        <motion.ul variants={variantsUl}>
+        <motion.ul className="header-ul" variants={variantsUl}>
             {listItems.map((item, index) => (
                 <motion.li
                     key={index}

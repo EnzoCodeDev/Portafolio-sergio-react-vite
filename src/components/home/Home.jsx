@@ -8,6 +8,7 @@ import {
     useTransform,
     MotionValue
 } from "framer-motion";
+import { Hero } from '../hero/Hero';
 
 function useParallax(value, distance) {
     return useTransform(value, [0, 1], [-distance, distance]);
@@ -43,6 +44,7 @@ export default function Home() {
 
     return (
         <>
+        <Hero/>
             {[1, 2, 3, 4, 5].map((image) => (
                 <Image id={image} />
             ))}

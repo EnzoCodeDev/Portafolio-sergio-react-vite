@@ -1,25 +1,25 @@
-body {
-    --black: #000000;
-    --ash-black: #222;
-    --white: #fafafa;
-    --sky: #00ccff;
-    --green: #22dddd;
-    --blue: #1300ff;
-    --dusk: #6600ff;
-    --purple: #9900ff;
-    --pink: #ff0066;
-    --red: #fe0222;
-    --orange: #fd7702;
-    --yellow: #ffbb00;
+// body {
+//     --black: #000000;
+//     --ash-black: #222;
+//     --white: #fafafa;
+//     --sky: #00ccff;
+//     --green: #22dddd;
+//     --blue: #1300ff;
+//     --dusk: #6600ff;
+//     --purple: #9900ff;
+//     --pink: #ff0066;
+//     --red: #fe0222;
+//     --orange: #fd7702;
+//     --yellow: #ffbb00;
   
-    --background: var(--red);
-    --accent: var(--white);
+//     --background: var(--red);
+//     --accent: var(--white);
   
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    color: var(--accent);
-  }
+//     margin: 0;
+//     padding: 0;
+//     background-color: var(--background);
+//     color: var(--accent);
+//   }
   
   * {
     font-family: sofia-pro, sans-serif;
@@ -156,7 +156,7 @@ body {
     width: 300px;
     height: 400px;
     position: relative;
-    max-height: 90vh;
+    // max-height: 90vh;
     margin: 20px;
     background: var(--white);
     overflow: hidden;
