@@ -1,0 +1,64 @@
+//Setting globlal css
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(6, 30, 59)
+}
+
+//Clase personalizada para los container
+.container-custom {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(43, 43, 43);
+}
+
+body::-webkit-scrollbar-track:hover {
+  background: rgb(43, 43, 43);
+}
+
+body::-webkit-scrollbar-track:active {
+  background: rgb(43, 43, 43);
+}

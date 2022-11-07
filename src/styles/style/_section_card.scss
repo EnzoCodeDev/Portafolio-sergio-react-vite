@@ -1,0 +1,223 @@
+@import "../../styles/base/mixinResponse";
+
+.container-section-card {
+    .sub-container-section-card {
+        .container-card-section-card {
+            margin-bottom: 30px;
+
+            .sub-container-card-section-card {
+
+                .container-image-section-card:after,
+                .container-image-section-card:before {
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                }
+
+                .container-image-section-card:hover:before {
+                    mix-blend-mode: overlay;
+                    box-shadow: 0 0 200px black inset;
+                }
+
+                .container-image-section-card {
+                    margin: 0;
+                    width: 550px;
+                    height: 350px;
+                    padding: 0;
+                    display: inline-block;
+                    position: relative;
+                    cursor: crosshair;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    figcaption {
+                        color: white;
+                        padding: 5px 10px;
+                        background: rgba(0, 0, 0, 0.8);
+                        border-radius: 5px;
+                        position: absolute;
+                        top: 20px;
+                        left: 10px;
+                        font-size: 1.2em;
+                        font-family: "Lato";
+                        z-index: 999;
+                    }
+                }
+
+                .container-info-section-card {
+                    padding: 20px 30px;
+                    width: 60%;
+
+                    .sub-container-info-section-card {
+                        display: table-cell;
+                        vertical-align: middle;
+                        width: 5000px;
+
+                        .header {
+                            width: 100%;
+                            position: relative;
+                            margin-bottom: 17px;
+                            border-bottom: 1px solid black;
+
+                            .title {
+                                text-align: center;
+                                color: #6eb48c;
+                                display: block;
+                                margin-bottom: 8px;
+                                width: 100%;
+                                font-size: 25px;
+                            }
+
+                            h2 {
+                                text-align: center;
+                                font-size: 18px;
+                                color: #313131;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                            }
+
+                            .info-data {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+
+                                .space {
+                                    margin: 0px 20px;
+                                }
+                            }
+
+                            margin-top: 18px;
+                        }
+
+                        .description {
+                            p {
+                                font-size: 17px;
+                                text-align: left;
+                            }
+                        }
+
+                        .container-bottom-reader {
+                            margin-top: 21px;
+
+                            .btn-read {
+                                display: flex;
+                                padding: 7px;
+                                background-color: #ff5722;
+                                color: #fff;
+
+                                .icon {
+                                    padding: 5px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .container-section-card {
+        display: flex;
+        padding: 3em 3em;
+
+        .sub-container-section-card {
+            width: 72%;
+            padding-right: 2em;
+
+            .container-card-section-card {
+                border: 1px solid #e5e5e5;
+
+                .sub-container-card-section-card {
+                    margin: auto;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-around;
+
+                    &.active {
+                        flex-direction: row;
+                    }
+                }
+
+            }
+
+        }
+
+        .container-aside {
+            width: 28%;
+        }
+
+    }
+}
+
+@include tablet {
+    .container-section-card {
+        padding: 2em 2em;
+
+        .sub-container-section-card {
+            .container-card-section-card {
+                border: 1px solid #e5e5e5;
+
+                .sub-container-card-section-card {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-around;
+
+                    &.active {
+                        flex-direction: row;
+                    }
+
+                    .container-image-section-card {
+                        width: 500px;
+                        height: 300px;
+
+                    }
+
+                    .container-info-section-card {
+                        padding: 10px 20px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@include mobile {
+    .container-section-card {
+        padding: 1em 1em;
+
+        .sub-container-section-card {
+            .container-card-section-card {
+                border: 1px solid #e5e5e5;
+                margin: auto;
+                margin-bottom: 30px;
+                max-width: 450px;
+
+                .sub-container-card-section-card {
+                    .container-image-section-card {
+                        width: 100%;
+                        height: 220px;
+                    }
+
+                    .container-info-section-card {
+                        padding: 0px 30px;
+                        width: 100%;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

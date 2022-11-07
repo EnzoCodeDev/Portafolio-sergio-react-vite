@@ -1,0 +1,171 @@
+@import "../base/mixinResponse";
+
+.container-section {
+    .content {
+        float: none;
+
+        .article-content {
+            background: #f8f8f8;
+            border: 1px solid #e5e5e5;
+
+            .entry-meta-wrap {
+                padding: 1em 0.6em;
+                border-bottom: 1px solid #e5e5e5;
+
+                .entry-meta {
+                    line-height: 1.5em;
+                    font-size: 1.0em;
+
+                    .meta-date {
+                        display: inline-block;
+                        padding: 0 0.6em;
+                        font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+                    }
+
+                    .meta-category {
+                        display: inline-block;
+                        padding: 0 0.6em;
+
+                    }
+                }
+            }
+
+            .post-content {
+                padding: 1.2em 1.6em 1.6em;
+                background: #fff;
+
+                .entry-title {
+                    font-size: 2.2em;
+                    font-family: 'Francois One', Tahoma, Verdana, Arial;
+                    color: #cc1111;
+                    line-height: 1.4em;
+                    word-wrap: break-word;
+                    text-decoration: none;
+                }
+
+                .entry {
+                    line-height: 1.6em;
+                    margin: 0;
+                    word-wrap: break-word;
+
+                    p {
+                        margin: 0.75em 0;
+                    }
+
+                    .has-text-align-center {
+                        text-align: center;
+
+                        a {
+                            color: #cc1111;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .wp-block-image {
+                        margin: 0 0 1em;
+
+                        .figure-img {
+                            margin-left: auto;
+                            margin-right: auto;
+                            display: table;
+
+                            img {
+                                width: 675px;
+                                height: 353px;
+                                max-width: 100%;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .container-section {
+        padding: 3em 3em;
+        display: flex;
+
+        .content {
+            width: 72%;
+            padding-right: 2em;
+
+            p {
+                font-size: 18px;
+            }
+
+            .has-text-align-center {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container-aside {
+        width: 28%;
+    }
+}
+
+@include tablet {
+    .container-section {
+        padding: 2em 2em;
+
+        .content {
+            padding-bottom: 2rem;
+            width: 100%;
+            margin: auto;
+
+            p {
+                font-size: 17px;
+            }
+
+            .has-text-align-center {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .container-aside {
+        width: 100%;
+    }
+}
+
+@include mobile {
+    .container-section {
+        padding: 1em 1em;
+
+        .content {
+            width: 100%;
+            padding-bottom: 1rem;
+
+            .article-content {
+                .entry-meta-wrap {
+                    padding: 0.8em 0.6em;
+                }
+
+                .post-content {
+                    padding: 1em 1.4em 1.4em;
+
+                    .entry-title {
+                        font-size: 1.5em;
+                    }
+
+                    .entry {
+                        .wp-block-image {
+
+                            .figure-img {
+
+                                img {
+                                    width: 500px;
+                                    height: 200px;
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

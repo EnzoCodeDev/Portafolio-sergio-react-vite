@@ -1,0 +1,13 @@
+{
+    "translate": {
+        "lenguage": "Idiomas",
+        "text-info": "Actualmente la aplicación está disponible en estos idiomas.",
+        "spanish": "Español",
+        "english": "Inglés",
+        "Portuguese-from-Brazil": "Portugués de (Brasil)",
+        "frances": "Francés"
+    },
+    "footer": {
+        "all-reserved": "Todos los derechos reservados."
+    }
+}

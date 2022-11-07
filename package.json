@@ -1,0 +1,33 @@
+{
+  "name": "portafolio-react-sergio-cano",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^7.6.4",
+    "i18next": "^22.0.4",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "install": "^0.13.0",
+    "moment": "^2.29.4",
+    "npm": "^8.19.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^12.0.0",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.3",
+    "sass": "^1.56.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "vite": "^3.2.0"
+  }
+}
