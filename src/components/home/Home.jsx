@@ -6,7 +6,6 @@ import {
     useScroll,
     useSpring,
     useTransform,
-    MotionValue
 } from "framer-motion";
 import { Hero } from '../hero/Hero';
 const Start = () => {

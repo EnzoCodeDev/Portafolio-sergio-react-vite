@@ -132,7 +132,7 @@ h1 {
 h2 {
   margin: 0;
   color: var(--accent);
-  left: calc(50% + 130px);
+  // left: calc(50% + 130px);
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
@@ -159,7 +159,7 @@ section {
 }
 
 section>div {
-  width: 300px;
+  width: 200px;
   height: 400px;
   position: relative;
   // max-height: 90vh;

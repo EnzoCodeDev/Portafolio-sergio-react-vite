@@ -1,8 +1,9 @@
 import "./hero.scss";
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useFollowPointer } from "./use-follow-pointer";
 import { Clouds } from "../clouds/Clouds";
+
 const Moon = () => {
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
@@ -52,17 +53,35 @@ const Moon = () => {
     )
 };
 export const Hero = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
     return (
-        <section>
+        <section ref={ref}>
             <div className="container-hero">
-                <div className="container-hero__title">
+                <div className="container-hero__title"
+                    style={{
+                        transform: isInView ? "none" : "translateX(-50%)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    }}>
                     <h1 className="container-hero__title__text">SERGIO<br />CANO</h1>
                     <div className="container-hero__title__span" />
                     <div className="container-hero__title__span2" />
                     <p className="container-hero__title__lead">Programador de software</p>
                 </div>
-                <Moon />
-                <p className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
+                <div style={{
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                }}>
+                    <Moon />
+                </div>
+                <p 
+                style={{
+                    transform: isInView ? "none" : "translateY(50%)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                }} 
+                className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
             </div>
         </section>
     );
