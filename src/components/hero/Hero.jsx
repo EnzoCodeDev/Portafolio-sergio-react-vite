@@ -3,22 +3,6 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./use-follow-pointer";
 import { Clouds } from "../clouds/Clouds";
-const Start = () => {
-    let w = window.innerWidth;
-    let h = window.innerHeight;
-    let stars = [];
-    for (let i = 0; i < 250; i++) {
-        let wRan = Math.floor(Math.random() * w);
-        let hRan = Math.floor(Math.random() * h);
-        stars.push((
-            <div key={i} className="star" style={{
-                bottom: `${hRan}px`,
-                right: `${wRan}px`,
-            }} />
-        ));
-    };
-    return stars;
-};
 const Moon = () => {
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
@@ -67,31 +51,10 @@ const Moon = () => {
         </React.Fragment>
     )
 };
-const NavList = () => {
-    return (
-        <div className="fp-nav">
-            <ul className="fp-nav__ul">
-                <li className="fp-nav__ul__li">
-                    <div className="indi active" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li>
-            </ul>
-        </div>
-    )
-}
 export const Hero = () => {
     return (
         <section>
             <div className="container-hero">
-                <Start />
                 <div className="container-hero__title">
                     <h1 className="container-hero__title__text">SERGIO<br />CANO</h1>
                     <div className="container-hero__title__span" />
@@ -100,7 +63,6 @@ export const Hero = () => {
                 </div>
                 <Moon />
                 <p className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
-                <NavList />
             </div>
         </section>
     );
