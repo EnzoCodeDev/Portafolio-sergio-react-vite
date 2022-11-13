@@ -39,7 +39,11 @@ export const Menu = () => {
             ref={containerRef}
         >
             <motion.div className="background" variants={sidebar} />
-            <MenuItem />
+            <div style={{
+                display: isOpen ? 'block' : 'none'
+            }}>
+                <MenuItem />
+            </div>
             <MenuToggle toggle={() => toggleOpen()} />
         </motion.nav>
     );

@@ -1,0 +1,48 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.container-section-portfolio {
+    background: rgb(0, 19, 42);
+    background: linear-gradient(100deg, rgba(0, 19, 42, 1) 16%, rgba(6, 30, 59, 1) 44%, rgba(36, 56, 80, 1) 71%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+
+    section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        scroll-snap-align: start;
+        perspective: 500px;
+        overflow-y: auto;
+    }
+}
+
+section>div {
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.ojjj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 200px;
+}
+
+
+.progress {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 3%;
+}

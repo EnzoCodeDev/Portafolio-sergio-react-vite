@@ -3,6 +3,7 @@
 .container-hero {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     &__title {
         color: #fff;
@@ -10,12 +11,12 @@
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s";
         z-index: 200;
         @include desktop {
-            top: 19.5%;
+            top: 30.5%;
             margin-left: 11%;
         }
 
         @include tablet {
-            top: 20.5%;
+            top: 30.5%;
             margin-left: 10%;
         }
 
@@ -84,7 +85,7 @@
     &__scrollDown {
         position: fixed;
         font-size: 0.6rem;
-        bottom: 60px;
+        bottom: 80px;
         line-height: 1;
         letter-spacing: 0.3em;
         -webkit-writing-mode: vertical-rl;
@@ -114,7 +115,7 @@
             left: 0;
             right: 0;
             margin: auto;
-            bottom: -80px;
+            bottom: -70px;
         }
     }
 }
