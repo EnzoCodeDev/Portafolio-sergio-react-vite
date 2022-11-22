@@ -1,8 +1,10 @@
 import "./hero.scss";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useFollowPointer } from "./use-follow-pointer";
+import { useFollowPointer } from "../../hooks/use-follow-pointer";
 import { Clouds } from "../clouds/Clouds";
+import moment from "moment/moment";
+
 
 const Moon = () => {
     const ref = useRef(null);
@@ -55,6 +57,17 @@ const Moon = () => {
 export const Hero = () => {
     const ref = useRef(null);
     const isInView = useInView(ref);
+    let hello = () => {
+        if (moment().isBetween(moment().format('YYYY-MM-DD') + " 06:00:00", moment().format('YYYY-MM-DD') + " 12:00:00")) {
+            return '¡Hola!, buenos días 👋 soy';
+        };
+        if (moment().isBetween(moment().format('YYYY-MM-DD') + " 12:00:00", moment().format('YYYY-MM-DD') + " 18:00:00")) {
+            return '¡Hola!, buenas tardes 👋 soy';
+        };
+        if (moment().isBetween(moment().format('YYYY-MM-DD') + " 18:00:00", moment().format('YYYY-MM-DD') + " 06:00:00")) {
+            return '¡Hola!, buenas noches 👋 soy';
+        };
+    }
     return (
         <section ref={ref}>
             <div className="container-hero">
@@ -64,6 +77,7 @@ export const Hero = () => {
                         opacity: isInView ? 1 : 0,
                         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                     }}>
+                    <p className="container-hero__title__hello">{hello()}</p>
                     <h1 className="container-hero__title__text">SERGIO<br />CANO</h1>
                     <div className="container-hero__title__span" />
                     <div className="container-hero__title__span2" />
@@ -75,13 +89,13 @@ export const Hero = () => {
                 }}>
                     <Moon />
                 </div>
-                <p 
-                style={{
-                    transform: isInView ? "none" : "translateY(50%)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }} 
-                className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
+                <p
+                    style={{
+                        transform: isInView ? "none" : "translateY(50%)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    }}
+                    className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
             </div>
         </section>
     );

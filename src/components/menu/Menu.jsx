@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
-import { useDimensions } from "./use-dimensions";
+import { useDimensions } from "../../hooks/use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import './menu.scss';
 import { MenuItem } from "./MenuItems";
@@ -17,7 +17,7 @@ const sidebar = {
     closed: {
         clipPath: "circle(0px at 0px 0px)",
         transition: {
-            delay: 0.5,
+            delay: 0.1,
             type: "spring",
             stiffness: 400,
             damping: 40

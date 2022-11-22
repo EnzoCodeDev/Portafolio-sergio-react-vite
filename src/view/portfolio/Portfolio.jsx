@@ -57,30 +57,17 @@ const NavList = () => {
             <ul className="fp-nav__ul">
                 {navLinkArray.map((item, i) => (
                     <li key={i} className="fp-nav__ul__li">
-                        <Link
-                            className='indi'
-                            activeClass='active'
-                            to={item}
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                        >
-                            {/* <div className="indi" /> */}
-                        </Link>
+                        <div className="indi active" >
+                            <Link
+                                to={item}
+                                smooth={true}
+                                duration={500}
+                                offset={-70}
+                            >
+                            </Link>
+                        </div>
                     </li>
                 ))}
-                {/* <li className="fp-nav__ul__li">
-                    <div className="indi active" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li>
-                <li className="fp-nav__ul__li">
-                    <div className="indi" />
-                </li> */}
             </ul>
         </div>
     )
