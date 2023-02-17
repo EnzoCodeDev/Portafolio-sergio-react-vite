@@ -69,13 +69,13 @@ export const Hero = () => {
         };
     }
     return (
-        <section ref={ref}>
+        <section id='hero' ref={ref}>
             <div className="container-hero">
                 <div className="container-hero__title"
                     style={{
                         transform: isInView ? "none" : "translateX(-50%)",
                         opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                        transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                     }}>
                     <p className="container-hero__title__hello">{hello()}</p>
                     <h1 className="container-hero__title__text">SERGIO<br />CANO</h1>
@@ -85,7 +85,7 @@ export const Hero = () => {
                 </div>
                 <div style={{
                     opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}>
                     <Moon />
                 </div>
@@ -93,7 +93,7 @@ export const Hero = () => {
                     style={{
                         transform: isInView ? "none" : "translateY(50%)",
                         opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                        transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                     }}
                     className="container-hero__scrollDown">DESPLÁCESE HACIA ABAJO</p>
             </div>

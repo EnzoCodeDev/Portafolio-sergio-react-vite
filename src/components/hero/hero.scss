@@ -392,51 +392,6 @@
     position: absolute;
 }
 
-.fp-nav {
-    @include desktop {
-        position: fixed;
-        left: 30px;
-        top: 32%;
-    }
-
-    @include tablet {
-        position: fixed;
-        bottom: 1%;
-        left: 47.5%;
-        transform: rotate(-90deg);
-    }
-
-    @include mobile {
-        position: fixed;
-        bottom: 1%;
-        left: 45.5%;
-        transform: rotate(-90deg);
-    }
-
-    &__ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-
-        &__li {
-            display: block;
-            height: 22px;
-            margin: 7px;
-
-            .indi {
-                background-color: white;
-                width: 25px;
-                height: 5px;
-
-                &.active {
-                    width: 50px;
-                }
-            }
-
-        }
-    }
-}
-
 
 @keyframes moonAnimation {
     0% {

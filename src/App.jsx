@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Header } from './components/header/Header';
 import { RoutesApp } from './routers/RoutesApp';
+import { Footer } from './components/footer/Footer';
 import './styles/styles.scss';
 const animations = {
   initial: { x: 300, opacity: 0 },
@@ -21,7 +22,7 @@ function App() {
       >
         <RoutesApp />
       </motion.div>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }

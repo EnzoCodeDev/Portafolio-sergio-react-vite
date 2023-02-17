@@ -57,13 +57,15 @@ const NavList = () => {
             <ul className="fp-nav__ul">
                 {navLinkArray.map((item, i) => (
                     <li key={i} className="fp-nav__ul__li">
-                        <div className="indi active" >
+                        <div className="fp-nav__ul__li__indi" >
                             <Link
+                                spy={true}
                                 to={item}
                                 smooth={true}
-                                duration={500}
-                                offset={-70}
+                                duration={1000}
+                                offset={50}
                             >
+                                <div className='fp-nav__ul__li__indi__a'>___</div>
                             </Link>
                         </div>
                     </li>

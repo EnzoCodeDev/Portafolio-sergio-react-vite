@@ -1,3 +1,5 @@
+@import '../../styles/base/mixinResponse';
+
 html {
     scroll-snap-type: y mandatory;
 }
@@ -15,7 +17,7 @@ html {
         justify-content: center;
         align-items: center;
         position: relative;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         perspective: 500px;
         overflow-y: auto;
     }
@@ -24,6 +26,56 @@ html {
 section>div {
     position: relative;
     scroll-snap-align: start;
+}
+
+.fp-nav {
+    @include desktop {
+        position: fixed;
+        left: 30px;
+        top: 32%;
+    }
+
+    @include tablet {
+        position: fixed;
+        bottom: 1%;
+        left: 47.5%;
+        transform: rotate(-90deg);
+    }
+
+    @include mobile {
+        position: fixed;
+        bottom: 1%;
+        left: 45.5%;
+        transform: rotate(-90deg);
+    }
+
+    &__ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__li {
+            display: block;
+            height: 22px;
+            margin: 7px;
+
+            &__indi {
+                background-color: white;
+                width: 25px;
+                height: 5px;
+
+                &.active {
+                    width: 50px;
+                }
+
+                &__a {
+                    position: absolute;
+                    margin-top: -13px;
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 .ojjj {
